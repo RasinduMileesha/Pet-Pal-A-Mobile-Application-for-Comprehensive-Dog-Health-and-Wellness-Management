@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PetDoc_APP" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Other customizations -->
+        <item name="colorButtonNormal">@color/black</item>
+    </style>
+    <style name="CustomButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/black</item>
+    </style>
+
+
+    <style name="Theme.PetDoc_APP" parent="Base.Theme.PetDoc_APP" />
+</resources>

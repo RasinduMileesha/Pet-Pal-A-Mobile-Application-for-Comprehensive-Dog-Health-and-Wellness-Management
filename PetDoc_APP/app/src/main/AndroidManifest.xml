@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+
+
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/logos"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo_fore_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PetDoc_APP"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <!-- Provider should be placed here, inside the application tag -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.petdoc_app.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+
+
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAhLwW1pQti3739OnnUGI0sw4IqSXfKAo0" />
+
+        <activity
+            android:name=".splashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".DiseaseReportActivity"
+            android:exported="true"/>
+        <activity android:name=".VETVaccActivity"
+            android:exported="true"/>
+        <activity android:name=".DiseaseDetectActivity"
+            android:exported="true"/>
+        <activity android:name=".vetcenterActivity"
+            android:exported="true"/>
+        <activity android:name=".ViewVaccActivity"
+            android:exported="true"/>
+        <activity android:name=".vaccDashActivity"
+            android:exported="true"/>
+        <activity android:name=".VaccManagerActivity"
+            android:exported="true"/>
+        <activity android:name=".ChatActivity"
+            android:exported="true"/>
+        <activity android:name=".crudPetActivity"
+            android:exported="true"/>
+        <activity android:name=".petManagerActivity"
+            android:exported="true"/>
+        <activity android:name=".petRegisterActivity"
+            android:exported="true"/>
+        <activity android:name=".userDashActivity"
+            android:exported="true"/>
+        <activity android:name=".vetDashActivity"
+                  android:exported="true"/>
+        <activity
+            android:name=".roleActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".registerActivity"
+            android:exported="true"/>
+        <activity android:name=".vetRegActivity"
+            android:exported="true"/>
+
+        <activity
+            android:name=".loginActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"/>
+
+    </application>
+
+</manifest>
